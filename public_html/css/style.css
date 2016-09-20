@@ -99,18 +99,24 @@ footer {
 .nav .navItem > a:hover, .nav .navItem > a:focus, .nav .navItem > a:active {
     text-decoration: none;
 }
-.nav .navItem > .dropdown-menu li a  {
+.nav .navItem > .dropdown-menu li a, .headerBlockRight > .dropdown-menu li a  {
     font-size: 18px;
     color: #9198a4;
     padding: 7px 20px;
     cursor: pointer;
     position: relative;
 }
-.nav .navItem > .dropdown-menu {
+.nav .navItem > .dropdown-menu{
     min-width: 250px;
     border-radius: 2px;
+    margin-top: 18px;
 }
-.nav .navItem > .dropdown-menu li a:hover{
+.headerBlockRight > .dropdown-menu{
+    min-width: 220px;
+    border-radius: 2px;
+    margin-top: 29px;
+}
+.nav .navItem > .dropdown-menu li a:hover, .headerBlockRight > .dropdown-menu li a:hover{
     background-image: -webkit-linear-gradient(top, #eaeef4 0%, #eaeef4 100%);
     background-image: -o-linear-gradient(top, #eaeef4 0%, #eaeef4 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeef4), to(#eaeef4));
@@ -133,7 +139,6 @@ footer {
     border-bottom-color: rgba(0, 0, 0, 0.2);
     content: '';
 }
-
 .nav .navItem > .dropdown-menu:after {
     position: absolute;
     top: -17px;
@@ -142,6 +147,28 @@ footer {
     border-right: 16px solid transparent;
     border-bottom: 17px solid #ffffff;
     border-left: 16px solid transparent;
+    content: '';
+}
+
+.headerBlockRight > .dropdown-menu:after {
+    position: absolute;
+    top: -17px;
+    right: 15px;
+    display: inline-block;
+    border-right: 16px solid transparent;
+    border-bottom: 17px solid #ffffff;
+    border-left: 16px solid transparent;
+    content: '';
+}
+.headerBlockRight > .dropdown-menu:before {
+    position: absolute;
+    top: -18px;
+    right: 14px;
+    display: inline-block;
+    border-right: 17px solid transparent;
+    border-bottom: 17px solid #ccc;
+    border-left: 17px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
     content: '';
 }
 
@@ -169,6 +196,15 @@ footer {
 }
 .ico-5{
     background-position:0px -82px;
+}
+.ico-6{
+    background-position:0px -104px;
+}
+.ico-7{
+    background-position:0px -126px;
+}
+.red{
+    color: #d51a23;
 }
 .btn-action {
     background-color: #eb614f;
@@ -560,7 +596,7 @@ a.account {
     color: #4b535f; /* text color */
     font-size: 18px;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 20px;
     line-height: 40px;
     float: left;
 }
@@ -570,123 +606,108 @@ a.account:active {
     text-decoration: none;
 }
 
-
-
 /*
-* Table Price
+* Table price
 */
-#plans,#plans ul,#plans ul li {
+
+.plans,.plans ul,.plans ul li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#pricePlans:after {
+.pricePlans:after {
     content: '';
     display: table;
     clear: both;
 }
 
-#pricePlans {
+.pricePlans {
     zoom: 1;
 }
 
-#pricePlans {
+.pricePlans {
     max-width: 69em;
     margin: 0 auto;
 }
 
-#pricePlans #plans .plan {
+.pricePlans .plans .plan {
     background: #fff;
     float: left;
     width: 100%;
     text-align: center;
-    border-radius: 0px;
+/*    border-radius: 5px;*/
     margin: 0 0 20px 0;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    font-size: 16px;
 }
 
 .planContainer .title h2 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #fff;
+/*    font-size: 2.125em;
+    font-weight: 600;
     margin: 0;
-    padding: .6em 0;
-    background: #b2bbce;
+    padding: .6em 0;*/
+    color: #4b535f;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .planContainer .title h2.bestPlanTitle {
     background: #3e4f6a;
-
     background: -webkit-linear-gradient(top, #475975, #364761);
     background: -moz-linear-gradient(top, #475975, #364761);
     background: -o-linear-gradient(top, #475975, #364761);
     background: -ms-linear-gradient(top, #475975, #364761);
     background: linear-gradient(top, #475975, #364761);
     color: #fff;
-    border-radius: 5px 5px 0 0;
+/*    border-radius: 5px 5px 0 0;*/
 }
 
 
-.planContainer .price p {
-    background: #3e4f6a;
-    background: -webkit-linear-gradient(top, #475975, #364761);
-    background: -moz-linear-gradient(top, #475975, #364761);
-    background: -o-linear-gradient(top, #475975, #364761);
-    background: -ms-linear-gradient(top, #475975, #364761);
-    background: linear-gradient(top, #475975, #364761);
+.planContainer .price p {    
     color: #fff;
-    font-size: 1.2em;
-    font-weight: 700;
-    height: 2.6em;
-    line-height: 2.6em;
+    font-size: 30px;
+    font-weight: 600;
+    height: 2em;
+    line-height: 2em;
     margin: 0 0 1em;
 }
 
 .planContainer .price p.bestPlanPrice {
     background: #f7814d;
+    
 }
 
 .planContainer .price p span {
-    color: #8394ae;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .planContainer .options {
-    margin-top: 10em;
+    margin-top: 20px;
 }
 
 .planContainer .options li {
     font-weight: 400;
-    color: #364762;
-    line-height: 2.5em;
-    -webkit-box-shadow: 0 2px 0px rgba(241,243,247,1);
-    box-shadow: 0 2px 0px rgba(241,243,247,1);
+    line-height: 1.5;
+    font-size: 18px;
 }
-.planContainer .options li.merge {
-    line-height: 10em;
-    height: 10em;
+.planContainer .button {
+    margin-top: 1.5em;
+    border-top:1px #ddd solid;
 }
-
-.planContainer .options li span {
-    font-weight: 400;
-    color: #979797;
-}
-
 .planContainer .button a {
     text-transform: uppercase;
     text-decoration: none;
-    color: #3e4f6a;
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 2.8em;
-    border: 2px solid #3e4f6a;
+    font-weight: 600;
+    line-height: 2.5em;
     display: inline-block;
-    width: 80%;
-    height: 2.8em;
-    border-radius: 4px;
+    width: 70%;
+    height: 2.5em;
     margin: 1.5em 0 1.8em;
+    background-color: #eb614f;
+    color: #fff;
+    border-bottom: 5px #b74a3c solid;
 }
 
 .planContainer .button a.bestPlanButton {
@@ -695,61 +716,159 @@ a.account:active {
     border: 2px solid #f7814d;
 }
 
-#credits {
+.plans li.plan:nth-child(3n+1) {
+    border-top: 5px #7c6093 solid; 
+}
+
+.plans li.plan:nth-child(3n+1) .planContainer .price p {
+    background: #7c6093;
+    background: -webkit-linear-gradient(top, #7c6093, #7c6093);
+    background: -moz-linear-gradient(top, #7c6093, #7c6093);
+    background: -o-linear-gradient(top, #7c6093, #7c6093);
+    background: -ms-linear-gradient(top, #7c6093, #7c6093);
+    background: linear-gradient(top, #7c6093, #7c6093);
+}
+.plans li.plan:nth-child(3n+2) {
+    border-top: 5px #6ab3e1 solid; 
+}
+.plans li.plan:nth-child(3n+2) .planContainer .price p {
+    background: #6ab3e1;
+    background: -webkit-linear-gradient(top, #6ab3e1, #6ab3e1);
+    background: -moz-linear-gradient(top, #6ab3e1, #6ab3e1);
+    background: -o-linear-gradient(top, #6ab3e1, #6ab3e1);
+    background: -ms-linear-gradient(top, #6ab3e1, #6ab3e1);
+    background: linear-gradient(top, #6ab3e1, #6ab3e1);
+}
+.plans li.plan:nth-child(3n+3) {
+    border-top: 5px #5bb46e solid; 
+}
+.plans li.plan:nth-child(3n+3) .planContainer .price p {
+    background: #5bb46e;
+    background: -webkit-linear-gradient(top, #5bb46e, #5bb46e);
+    background: -moz-linear-gradient(top, #5bb46e, #5bb46e);
+    background: -o-linear-gradient(top, #5bb46e, #5bb46e);
+    background: -ms-linear-gradient(top, #5bb46e, #5bb46e);
+    background: linear-gradient(top, #5bb46e, #5bb46e);
+}
+/*
+*  End style Table price
+*/
+
+.top-header {
+    width: 100%;
+    background-color: #709bcb; /* layer fill content + color overlay */
+    -moz-box-shadow: 0 0 3px rgba(0,1,1,.2); /* drop shadow */
+    -webkit-box-shadow: 0 0 3px rgba(0,1,1,.2); /* drop shadow */
+    box-shadow: 0 0 3px rgba(0,1,1,.2); /* drop shadow */
+    height: 48px;
+    line-height: 48px;
+}
+.top-nav li {
     text-align: center;
-    font-size: .8em;
-    font-style: italic;
-    color: #777;
-}
+    color: #fff; /* text color */
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
 
-#credits a {
-    color: #333;
 }
-
-#credits a:hover {
+.top-nav li a {
+    color: #fff;
+    display: block;
+}
+.top-nav li:hover a {
+    color: #ade7ff;
     text-decoration: none;
 }
-
-#plans .plan:hover .planContainer li.title h2 {
-    background: #53b5f3;
+.top-nav li .ico-bar {
+    width: 19px;
+    height: 20px;
+    background-image: url(../images/bgico.png);
+    display: inline-block;
+    position: relative;
+    top: 4px;
 }
-.planContainer .btn-onselection {
-    margin: 15px auto 15px auto;
+.ico-bar-1{
+    background-position: 0px -175px;
+}
+.top-nav li:hover .ico-bar-1{
+    background-position: -22px -175px;
+}
+.ico-bar-2{
+    background-position: 0px -197px;
+}
+.top-nav li:hover .ico-bar-2{
+    background-position: -22px -197px;
+}
+.ico-bar-3{
+    background-position: 0px -219px;
+}
+.top-nav li:hover .ico-bar-3 {
+    background-position: -22px -219px;
+}
+.ico-bar-4{
+    background-position: 0px -237px;
+}
+.top-nav li:hover .ico-bar-4{
+    background-position: -22px -237px;
+}
+.ico-bar-5{
+    background-position: 0px -257px;
+}
+.top-nav li:hover .ico-bar-5{
+    background-position: -22px -257px;
+}
+.fix-bar {
+   position: fixed;
+   top:0px;
+   transition: all .2s;
+   z-index: 999;
 }
 
-.planContainer .options li span.month{
+.link-bar {
+    width: 100%;
+    display: block;
+    background: transparent;
+    outline: 0px;
+    border: 0; 
+    color: #fff;
+    height: 48px;
+    font-weight: 300;
+    padding: 0px;
+    margin: 0px;
+}
+.select-bar option {
+    color: #000;
+    font-weight: 300;
+}
+.top-header .dropdown-link-bar {
+    width: 100%;
+    margin-top: 0px;
+    border-radius: 0px;
+}
+.dropdown-link-bar li a{
     font-size: 18px;
-    font-weight: 600;
-    color: #53b5f3;
-    height: 2.5em;
-    overflow: hidden;
+    color: #9198a4;
+    padding: 7px 20px;
+    cursor: pointer;
+    position: relative;
 }
-.planContainer .options li span.discount{
-    font-size: 18px;
-    font-weight: 600;
-    color: #ec6250;
-    height: 2.5em;
-    overflow: hidden;
+.link-bar:hover {
+    color: #fff;
+    text-decoration: none;
 }
-.planContainer .options li span.sumprice{
-    font-size: 20px;
-    font-weight: 600;
-    color: #4b535f;
-    height: 2.5em;
-    overflow: hidden;
+.icobar img, .icoaccount img {
+    width: 40%;
 }
-
-
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
-    #pricePlans #plans .plan {
+    .pricePlans .plans .plan {
         width: 49%;
         margin: 0 2% 20px 0;
     }
 
-    #pricePlans #plans > li:nth-child(2n) {
+    .pricePlans .plans > li:nth-child(2n) {
         margin-right: 0;
-    }
+    }    
 
 }
 /*
@@ -759,6 +878,15 @@ a.account:active {
 
 /* Extra Small */
 @media(max-width:767px){
+    .headerBlockRight {
+        margin: 15px -15px;
+    }
+    .headerBlockRight a {
+        margin-left: 0px;
+    }
+    .headerBlockRight > .dropdown-menu {
+        margin-top: 4px;
+    }
     .logo img {
         width: 35px;
     }
@@ -946,25 +1074,37 @@ a.account:active {
 
 /* Small */
 @media(min-width:768px) and (max-width:991px){
-    #pricePlans #plans .plan {
+
+    .pricePlans .plans .plan {
         width: 49%;
         margin: 0 2% 20px 0;
     }
 
-    #pricePlans #plans > li:nth-child(2n) {
+    .pricePlans .plans > li:nth-child(2n) {
         margin-right: 0;
+    }
+    .top-nav li a {
+        font-size: 13px;
+    }
+    .nav .navItem > a {
+        font-size: 13px;
+    }
+    a.account {
+        margin-top: 20px;
+        font-size: 13px;
     }
 
 }
 
 /* Medium */
 @media(min-width:992px) and (max-width:1199px){
-    #pricePlans #plans .plan {
-        width: 24%;
-        margin: 0 0 20px 0;
+
+    .pricePlans .plans .plan {
+        width: 49%;
+        margin: 2% 2% 20px 0;
     }
 
-    #pricePlans #plans > li:nth-child(2n) {
+    .pricePlans .plans > li:nth-child(2n) {
         margin-right: 0;
     }
 
@@ -972,47 +1112,18 @@ a.account:active {
 
 /* Large */
 @media(min-width:1200px){
-    #pricePlans {
+    .pricePlans {
         margin: 2em auto;
     }
 
-    #pricePlans #plans .plan {
-        width: 24%;
-        margin: 0 0 20px 0;
-        -webkit-transition: all .25s;
-        -moz-transition: all .25s;
-        -ms-transition: all .25s;
-        -o-transition: all .25s;
-        transition: all .25s;
+    .pricePlans .plans .plan {
+        width: 31%;
+        margin: 2% 2.33% 20px 0;
     }
 
-    #pricePlans #plans > li:last-child {
+    .pricePlans .plans > li:last-child {
         margin-right: 0;
     }
 
-    #pricePlans #plans .plan:hover {
-        -webkit-transform: scale(1.04);
-        -moz-transform: scale(1.04);
-        -ms-transform: scale(1.04);
-        -o-transform: scale(1.04);
-        transform: scale(1.04);
-    }
 
-    .planContainer .button a {
-        -webkit-transition: all .25s;
-        -moz-transition: all .25s;
-        -ms-transition: all .25s;
-        -o-transition: all .25s;
-        transition: all .25s;
-    }
-
-    .planContainer .button a:hover {
-        background: #3e4f6a;
-        color: #fff;
-    }
-
-    .planContainer .button a.bestPlanButton:hover {
-        background: #ff9c70;
-        border: 2px solid #ff9c70;
-    }
 }
