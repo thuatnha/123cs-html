@@ -325,6 +325,53 @@ h1.title-selecttion {
     box-shadow:none !important;
     -webkit-box-shadow:none  !important;
 }
+.panel-noradius {
+    border-radius: 0; 
+}
+.panel-1 {
+    border-color: #7c6093; 
+}
+.panel-1 > .panel-heading {
+    color: #fff;
+    background-color: #7c6093;
+    border-color: #7c6093;
+    padding: 15px;
+}
+.panel-2 {
+    border-color: #5ab46e; 
+}
+.panel-2 > .panel-heading {
+    color: #fff;
+    background-color: #5ab46e;
+    border-color: #5ab46e;
+    padding: 15px;
+}
+.panel-3 {
+    border-color: #ec6250; 
+}
+.panel-3 > .panel-heading {
+    color: #fff;
+    background-color: #ec6250;
+    border-color: #ec6250;
+    padding: 15px;
+}
+.panel-4 {
+    border-color: #46ceeb; 
+}
+.panel-4 > .panel-heading {
+    color: #fff;
+    background-color: #46ceeb;
+    border-color: #46ceeb;
+    padding: 15px;
+}
+.panel-body p {
+    font-size: 16px;
+   text-align: justify; 
+}
+.panel-body h5 {
+    font-weight: 600;
+    text-align: left;
+}
 .btn-onselection{
     display: block;
     width: 160px;
@@ -332,6 +379,9 @@ h1.title-selecttion {
     height: 40px;
     line-height: 40px;
     padding: 0;
+}
+.table-translate {
+    font-size: 16px;
 }
 .support-table {
     display: table;
@@ -543,8 +593,22 @@ h3.title-cart {
     font-size: 16px;
 }
 .table-shop > tbody > tr > td:last-child {
-    background: transparent;
-    border: 0px;
+/*    background: transparent;
+    border: 0px;*/
+}
+.bg-numcall {
+    background-color: #53b5f3 !important;
+    text-transform: uppercase;
+    color: #fff;
+}
+.bg-priceservice {
+    background-color: #24416e !important;
+    text-transform: uppercase;
+    color: #fff;
+}
+.show-price {
+    min-width: 100px;
+    text-align: right;
 }
 .title-tableshop {
     font-weight: 600;
@@ -709,7 +773,19 @@ a.account:active {
     color: #fff;
     border-bottom: 5px #b74a3c solid;
 }
-
+ a.btn-buy {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 2.5em;
+    display: inline-block;
+    width: 100%;
+    height: 2.5em;
+    margin: 0.5em 0 1.8em;
+    background-color: #eb614f;
+    color: #fff;
+    border-bottom: 5px #b74a3c solid;
+}
 .planContainer .button a.bestPlanButton {
     color: #fff;
     background: #f7814d;
@@ -775,7 +851,10 @@ a.account:active {
     color: #fff;
     display: block;
 }
-.top-nav li:hover a {
+.top-nav li:hover a,
+.top-nav li a:hover,
+.top-nav li:focus a,
+.top-nav li a:focus{
     color: #ade7ff;
     text-decoration: none;
 }
@@ -955,9 +1034,9 @@ a.account:active {
         display: block;
         padding: 0px;
     }
-    .panel-body{
+/*    .panel-body{
         padding: 0px;
-    }
+    }*/
     .media {
         padding: 15px;
     }
@@ -1008,7 +1087,7 @@ a.account:active {
         top: -9999px;
         left: -9999px;
     }
-    .table-shop > tbody > tr > td:nth-child(2){
+    /*    .table-shop > tbody > tr > td:nth-child(2){
         background: #b2bbce;
 
     }
@@ -1018,7 +1097,7 @@ a.account:active {
     .table-shop > tbody > tr > td:last-child{
         background: #eff1f5;
         text-align: right;
-    }
+    }*/
     .intro-service {
         height: auto;
         min-height:30px;
